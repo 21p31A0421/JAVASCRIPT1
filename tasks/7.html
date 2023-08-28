@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>palindrome or not</title>
+</head>
+<body>
+	<script type="text/javascript">
+    function isPalindrome(str) {
+    var  j= str.length-1
+    for(var i=0;i<str.length/2; i++){
+        if(str[i]!=str[j]){
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+  
+var str1="chandini"
+document.write(isPalindrome(str1));
+document.write("<br>")
+var str2="madam"
+document.write(isPalindrome(str2));
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onkeyup</title>
+	<style type="text/css">
+		input{
+			outline:none;
+		}
+	</style>
+</head>
+<body>
+<label>Enter Name</label>
+<input type="text" onkeyup="sample(this.value)"id="ins_id">
+<br>
+<span id="output"></span>
+<script type="text/javascript">
+	function sample(str){
+		if(str.length<4){
+            document.getElementById('ins_id').style.border='1px solid red';
+			//document.getElementById('output').innerText="Please Enter Name";
+			document.getElementById('output').innerText="Please Enter more than only 3 characters";
+			document.getElementById('output').style.color='red';
+		}
+		else{
+          document.getElementById('ins_id').style.border='1px solid black'
+          document.getElementById('output').innerText=''
+		}
+	}
+</script>
+</body>
+</html>

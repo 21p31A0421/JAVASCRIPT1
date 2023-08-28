@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table</title>
+</head>
+<body>
+<table border="1" cellspacing="0" id="my table">
+	<thead>
+		<tr>
+			<th>course name</th>
+			<th>course number</th>
+			<th>course fees</th>
+			<th>course place</th>
+		</tr>
+	</thead>
+	<!--<tbody>
+		<tr>
+			<td>html</td>
+			<td>23423</td>
+			<td>235</td>
+			<td>dwp</td>
+		</tr>
+		<tr>
+			<td>css</td>
+			<td>65687</td>
+			<td>567</td>
+			<td>dwp</td>
+		</tr>
+		<tr>
+			<td>javascript</td>
+			<td>67845</td>
+			<td>7656</td>
+			<td>dwp</td>
+		</tr>
+	</tbody>-->
+	<tbody id="tbody"></tbody>
+</table>
+<script type="text/javascript">
+	let courses=[
+		{"name":"html",
+		'cno':'23423',
+		'fees':'235',
+		'places':'dwp'
+        },
+        {"name":"html",
+		'cno':'23423',
+		'fees':'235',
+		'places':'dwp'
+        },
+        {"name":"html",
+		'cno':'23423',
+		'fees':'235',
+		'places':'dwp'
+        },
+        {"name":"html",
+		'cno':'23423',
+		'fees':'235',
+		'places':'dwp'
+        }
+	]
+	for(i=0;i<courses.length-1;i++){
+	//create a element:
+    let tr=document.createElement("tr")
+    let td1=document.createElement("td")
+    let td2=document.createElement("td")
+    let td3=document.createElement("td")
+    let td4=document.createElement("td")
+    td1.innerText=courses[i].name             
+    td2.innerText=courses[i].cno
+    td3.innerText=courses[i].fees
+    td4.innerText=courses[i].places
+    tr.append(td1)
+    tr.append(td2)
+    tr.append(td3)
+    tr.append(td4)
+    document.getElementById("tbody").append(tr)}
+   
+    //function changeX(){x=20;}
+    //changeX();
+    //console.log(x);
+    var myVar=5;
+     function myFunc(){var myVar=10;}
+    myFunc();
+    console.log(myVar);
+</script>
+</body>
+
+</html>

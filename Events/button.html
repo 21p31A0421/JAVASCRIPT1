@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button</title>
+</head>
+<body>
+ <button onclick="incrbyone()">Incr by 1</button>
+ <button onclick="decrbyone()">decr by 1</button>
+ <p id="output"></p>
+ <script type="text/javascript">
+ 	var i=0;
+ function incrbyone(){
+   if(i<6){
+    document.getElementById("output").innerHTML=++i;
+   }
+}
+function decrbyone(){
+   if(i>1){
+    document.getElementById("output").innerHTML=--i;
+   }
+}
+</script>
+</body>
+</html>

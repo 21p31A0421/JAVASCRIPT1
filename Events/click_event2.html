@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>click</title>
+</head>
+<body>
+    <button id="btn">click here</button>
+    <script type="text/javascript">
+    //  let b=document.getElementById("btn")
+      //method 1
+      //b.onclick=test
+      //function test(){
+           //alert("Hello!")
+      //}
+      // anonymus function method 2
+      //b.onclick=function(){
+      	//alert("testing....")
+      //}
+      // add event listener
+       let b=document.getElementById("btn")
+       b.addEventListener("click", test);
+
+     function test() {
+      alert("testing...")
+}
+    </script>
+</body>
+</html>

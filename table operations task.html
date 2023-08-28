@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Operations</title>
+    <link rel="stylesheet" type="text/css" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style type="text/css">
+	#row_id{
+		margin-left: 150px;
+		margin-bottom:20px;
+		margin-top:20px;
+		background-color:skyblue;
+		border: 2px solid skyblue;
+		border-radius:15px;
+		padding:5px;
+	}
+	h2{
+		display: inline;
+	}
+	#a{
+		margin-left: 5px;
+		margin-right: 20px;
+		color:orange;
+	}
+	#b{
+		margin-right:5px;
+        color:red;
+	}
+</style>
+<body>
+	<center>
+    <h2>Product Details</h2>
+    <button onclick="addRow()" id="row_id">+ Add new</button>
+    <table id="dataTable" border="1" cellspacing="0" cellpadding="15">
+        <tr>
+            <th>Product Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+</center>
+    <script>
+        let data = [
+            {id:"456789",name:"Realme mobile",price:"16000"},
+            { id:"123456",name:"MI mobile",price:"18000" },
+            { id:"365648",name:"Vivo mobile",price:"20000" }
+        ];
+
+        function displayData() {
+            const table = document.getElementById("dataTable");
+            table.innerHTML ='<tr><th>Product Id</th><th>Name</th><th>Price</th><th>Actions</th></tr>';
+
+            data.forEach((item, index) => {
+                let row = table.insertRow();
+                let  idCell = row.insertCell(0);
+                let  nameCell = row.insertCell(1);
+                let priceCell = row.insertCell(2);
+                let  actionCell = row.insertCell(3);
+
+                idCell.innerHTML = item.id;
+                nameCell.innerHTML = item.name;
+                priceCell.innerHTML = item.price;
+                actionCell.innerHTML =`<i onclick="editRow(${index})" class="fa-solid fa-pen" id="a"></i> 
+                <i onclick="deleteRow(${index})" class="fa-solid fa-trash"id="b"></i>`;
+            });
+        }
+
+        function addRow() {
+            const id ="<input type='text>";
+            const name ="<input type='text>";
+            const price ="<input type='text>";
+
+        if (id && name && price) {
+                data.push({ id ,name ,price });
+                displayData();
+           }
+        }
+
+        function editRow(index) {
+            const newId =prompt("Enter the new Product id");
+            const newName =prompt("Enter the new name");
+            const newPrice =prompt("Enter the new price");
+            if (newId && newName && newPrice) {
+                data[index] = { id:newId, name: newName, price: newPrice };
+                displayData();
+            }
+
+        }
+
+        function deleteRow(index) {
+            let a = confirm('do you want delete');
+            if(a==true){
+                data.splice(index, 1);
+            displayData(); 
+            }
+                
+         }
+        displayData();
+    </script>
+</body>
+</html>S

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String methods</title>
+	<style>
+		p{
+			margin-left: 60px;
+			font-size: 15px;
+		}
+		h3{
+			margin-left: 20px;
+			font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+	<h2>String Methods</h2>
+	<h3>1.substr()</h3>
+	<p id="demo"></p>
+	<h3>2.substring()</h3>
+	<p id="2"></p>
+	<h3>3.replace()</h3>
+	<p id="3"></p>
+	<h3>4.search()</h3>
+	<p id="4"></p>
+	<h3>5.toLowerCase()</h3>
+	<p id="5"></p>
+	<h3>6.toUpperCase()</h3>
+	<p id="6"></p>
+	<h3>7.indexOf()</h3>
+	<p id="7"></p>
+	<h3>8.includes()</h3>
+	<p id="8"></p>
+	<h3>9.slice()</h3>
+	<p id="9"></p>
+	<h3>10.concat()</h3>
+	<p id="10"></p>
+	<h3>11.lastIndexOf()</h3>
+	<p id="11"></p>
+	<h3>12.charCodeAt()</h3>
+	<p id="12"></p>
+	<h3>13.trim()</h3>
+	<p id="13"></p>
+	<h3>14.charAt()</h3>
+	<p id="14"></p>
+	<h3>15.valueOf()</h3>
+	<p id="15"></p>
+	<h3>16.split()</h3>
+	<p id="16"></p>
+	<h3>17.toString()</h3>
+	<p id="17"></p>
+	<h3>18.match()</h3>
+	<p id="18"></p>
+	<script>
+		let name = "Technical Hub";
+		// document.write("Original name :"+name)
+		document.getElementById("demo").innerHTML = "The substr of given name is : "+name.substr(0,10);
+
+		let name1 = "Drive Ready";
+		document.getElementById("2").innerHTML = "The substring of given name is : "+name1.substring(0,5);
+
+		let text = "Full Stack Developer";
+		document.getElementById("3").innerHTML = "The replace of given text is : "+text.replace("Developer","Trainee");
+
+		let str1 = "chandini";
+		document.getElementById("4").innerHTML = "The search of 'a' is : "+str1.search('a');
+
+		let str2 = "Chandini";
+		document.getElementById("5").innerHTML = "The lowercase of given string is : "+str2.toLowerCase();
+
+		let str3 = "chandini";
+		document.getElementById("6").innerHTML = "The uppercase of given string is : "+str3.toUpperCase();
+
+		let str4 = "chandini";
+		document.getElementById("7").innerHTML = "The index of 'a' is : "+str4.indexOf('a');
+
+		let str5 = "chandini";
+		document.getElementById("8").innerHTML = "The includes of 'a' is : "+str5.includes('a');
+
+		let text1 = "Full Stack";
+		let part = text1.slice(5,10);
+		document.getElementById("9").innerHTML = "The slice of given string is : "+ part; 
+
+		let a = "Hii";
+		let b = "Welcome!";
+		let c = a.concat(" ",b);
+		document.getElementById("10").innerHTML = "The concat of given string is : "+  c;
+
+		let e = "Full stack";
+		document.getElementById("11").innerHTML = "The lastindexof of given string is : "+e.lastIndexOf();
+
+		let d = "Full stack";
+		document.getElementById("12").innerHTML = "The charCodeAt of given string is : "+d.charCodeAt(0);
+
+		let f = "     Hii welcome!     ";
+		document.getElementById("13").innerHTML ="The trim of given string is : "+f.trim()
+
+		let g = "     Hello calm down!     ";
+		document.getElementById("14").innerHTML ="The charAt of given string is : "+g.charAt(5)
+
+		let h = "     Hello calm down!      ";
+		document.getElementById("15").innerHTML ="The value of given string is : "+h.valueOf()
+
+		let i = "a,b,c,d,e,f";
+		document.getElementById("16").innerHTML ="The split of given string is : "+i.split(",")
+
+		let j = "Hello calm down! ";
+		let k =j.toString();
+		document.getElementById("17").innerHTML ="The toString of given string is : "+ k;
+
+		let l = "The hardwork will never fails";
+		let m = l.match(/hardwork/);
+ 		document.getElementById("18").innerHTML ="The match of given string is : "+ m;
+	</script>
+</body>
+</html>

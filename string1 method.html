@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>string methods</title>
+</head>
+<body>
+	<table border="1" cellspacing="0">
+		<tr>
+			<td>d</td>
+			<td>r</td>
+			<td>i</td>
+			<td>v</td>
+			<td>e</td>
+			<td>&nbsp</td>
+			<td>r</td>
+			<td>e</td>
+			<td>a</td>
+			<td>d</td>
+			<td>y</td>
+			
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>-11</td>
+			<td>-10</td>
+			<td>-9</td>
+			<td>-8</td>
+			<td>-7</td>
+			<td>-6</td>
+			<td>-5</td>
+			<td>-4</td>
+			<td>-3</td>
+			<td>-2</td>
+			<td>-1</td>
+			
+			
+		</tr>
+	</table>
+	<script>
+		let str='drive ready';
+		//document.write("<b>"+str+"<br><br>")
+		//document.write("<b>"+str.length+"<br>")
+		function ss(str_name){
+			document.write("<b>"+str_name+"<br><br>");
+		}
+		ss("Original String= "+str)
+		ss("String length ="+str.length)
+		ss("String length="+str[3])
+		//charAt method
+		ss("Char At method =" +str.charAt(4))// character at position 3.output:s
+		//indexof method
+		ss("Index of ="+str.indexOf('r'))//1
+        ss(" Last index of ="+str.lastIndexOf('r'))//6
+        //trim method
+        let str1='chandini    ';
+        ss("trim method="+str1.trim())//remove the spaces from left to right
+        let str2='CHANDINI'
+        ss("lower case="+str2.toLowerCase())
+        let str3='chandini'
+        ss("upper case="+str2.toUpperCase())
+        //concatenation strings
+        let str4='chandini';
+        let str5='priya';
+        let str6=' siva';
+        let str7=' kala';
+        let str8=' saikrishna';
+        ss("concate="+str3.concat(str5,str6,str7,str8))
+        //includes() ==>returns boolean value
+        ss("Includes method ="+str7.includes('kala'))//true 
+        ss("Includes method ="+str7.includes('priya'))//false
+        //converting string into an array => split() method
+        let str9='chandini';
+        ss("split name="+str9.split(""))
+        let str10='ravi&raju,ram';
+        ss("string="+str10.split("&"));//string divides by based on deliminator "&"; 
+        ss("string="+str10.split(","));//string divides by based on deliminator ",";
+        //startswith => returns the boolean value
+        ss("start="+str10.startsWith("r"));
+        ss("start="+str10.startsWith("u")); 
+        let str11='chandu'
+        ss("end="+str11.endsWith("r"));
+        ss("end="+str11.endsWith("u")); 
+        //slice method
+        //string name.slice('startpos,endpos-1')
+        ss("slice="+str.slice(1,4));
+        ss("slice="+str.slice(-4)); 
+        ss("slice="+str.slice(-4,-2)); 
+        //substring method
+        //allow only positive index
+        ss("slice method="+str.substring(1,4));
+        ss("slice="+str.substring(4,1)); 
+        ss("slice="+str.substring(-1));//complete string will come
+        //substr method =substr(starpos,length of the charcters from 1st arg position)
+        ss("slice method="+str.substr(1,4));
+        ss("slice method="+str.substr(1,6));
+	</script>
+
+</body>
+</html>

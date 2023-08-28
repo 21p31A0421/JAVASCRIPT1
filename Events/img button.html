@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button</title>
+	<style type="text/css">
+		button{
+         border:2px solid pink;
+         padding:10px;
+         background:skyblue;
+         width:100px;
+         border-radius:10px;
+         font-size:15px;
+         font-weight:bold;
+		}
+		
+	</style>
+</head>
+<body>
+ <center><button onclick="nextslide()">Next</button>
+ <button onclick="prevslide()">prev</button>
+ <p id="output">
+ 	<img src="1.jpg"style="width:200px;height:200px;"/>
+ </p></center>
+ <script type="text/javascript">
+ 	var i=1;
+ function nextslide(){
+   if(i<5){
+   	var res=++i;
+    document.getElementById("output").innerHTML="<img src='"+res+".jpg'style='width:200px;height:200px;'/>";
+   }
+}
+function prevslide(){
+   if(i>1){
+   	var res=--i;
+    document.getElementById("output").innerHTML="<img src='"+res+".jpg'style='width:200px;height:200px;'/>";
+   }
+}
+</script>
+</body>
+</html>

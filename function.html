@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>functions</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	//a nomrmal function with no arguments or parameters
+     	function name(){
+     		document.write("chandini");
+     	}
+     	//name()
+     	// a function with one arguement
+     	function getname(a){
+     		document.write(a)
+     	}
+     	//getname("priya")
+     	//
+     	//var id=prompt("scan your id")
+     	function getrollnumberbyscan(rollno){
+     		document.write(rollno)
+     	}
+     	//getrollnumberbyscan(id)
+     	//a function with two arguements
+     	function sum(num1=20,num2=10){
+     		document.write(num1+num2)
+     	}
+     	//sum()
+     	// function sum(num1,num2) it will give u a NaN because not giving any value
+     	function cube(num=10){
+     		document.write(num*num*num)
+     	}
+     	//cube()
+     	//function cube(num1,num2){
+             //document.write(num1**num2)
+     		//}
+     	//cube(2,3)
+        // anonymus function is a function  without having function name
+        var output=function(num){
+        	return (num*10)
+        }
+        //document.write(output(5))
+        // arrow function
+        // no function keyword
+        //use  function n0ame with =
+        //after paranthesis is use with =>
+        add=(num1,num2)=>{
+        	document.write(num1+num2);
+
+        	 }
+        	 //add(2,3)
+     // arrow function with one arguement
+     getid=rollno =>{
+     	document.write(rollno)
+     }
+    // getid(22)
+     // arrow function with no arguements
+     // test =() => { or
+     test =_=>{
+     	document.write("testing...")
+     }
+     //test()
+   //setTimeout() function, it is a callback function i.e a function as a argument inside a another function it is also a asynchronous
+   setTimeout(test1,3000)
+     function test1(){
+     	document.write("execute after 3 secs")
+     }
+     </script>
+</body>
+</html>

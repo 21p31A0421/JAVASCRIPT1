@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var,let and const</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a=10;
+	//document.write(a);
+	let b=20;
+	//let b=20; redeclaration is not possible
+	b=20;//re intialization is possible
+	//document.write(b);
+	// block scope  variable
+	{
+		let name2="chandini";
+		document.write(name2)
+	}
+//document.write(name2);
+const pi=3.14;
+//pi=3.14;// if we redeclare or reintialize it will caught you error
+document.write(pi);
+</script>
+</body>
+</html>

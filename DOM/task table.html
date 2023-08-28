@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task border table</title>
+</head>
+<body>
+<h1>Task</h1>
+<table border="1"cellspacing="1">
+	<tbody>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</tbody>
+</table>
+
+<script type="text/javascript">
+	let all_tds=document.getElementsByTagName("td");
+	for (var i=0;i<all_tds.length;i++){
+		all_tds[i].innerText=all_tds.length-i;//i+1;all_tds.length-i;
+			}
+</script>
+</body>
+</html>

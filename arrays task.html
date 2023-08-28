@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array methods</title>
+</head>
+<body>
+	<h2>Array Methods</h2>
+	<h4>1.map() method</h4>
+	<p id="map"></p>
+	<h4>2.filter() method</h4>
+	<p id="filter"></p>
+	<h4>3.sort() method</h4>
+	<p id="sort"></p>
+	<h4>4.forEach() method</h4>
+	<p id="forEach"></p>
+	<h4>5.concat() method</h4>
+	<p id="concat"></p>
+	<h4>6.every() method</h4>
+	<p id="every"></p>
+	<h4>7.some() method</h4>
+	<p id="some"></p>
+	<h4>8.includes() method</h4>
+	<p id="includes"></p>
+	<h4>9.join() method</h4>
+	<p id="join"></p>
+	<h4>10.reduce() method</h4>
+	<p id="reduce"></p>
+	<h4>11.find() method</h4>
+	<p id="find"></p>
+	<h4>12.findIndex() method</h4>
+	<p id="findindex"></p>
+	<h4>13.indexOf() method</h4>
+	<p id="indexof"></p>
+	<h4>14.fill() method</h4>
+	<p id="fill"></p>
+	<h4>15.slice() method</h4>
+	<p id="slice"></p>
+	<h4>16.reverse() method</h4>
+	<p id="reverse"></p>
+	<h4>17.push() method</h4>
+	<p id="push"></p>
+	<h4>18.pop() method</h4>
+	<p id="pop"></p>
+	<h4>19.shift() method</h4>
+	<p id="shift"></p>
+	<h4>20.unshift() method</h4>
+	<p id="unshift"></p>
+</body>
+<script type="text/javascript">
+	const arr = [1,2,3,4,5];
+	const result = arr.map(getres);
+	document.getElementById("map").innerHTML = "After adding 10 to every element in array is "+result;
+	function getres(num) {
+	  return num + 10;
+	}
+	document.getElementById("filter").innerHTML = "Age is greater than 18 are "+arr.filter(checkAdult);
+	function checkAdult(age) {
+	  return age >= 18;
+	}
+	arr.sort(function(a, b){return a-b});
+	document.getElementById("sort").innerHTML = "After sorting the array is"+arr;
+	let sum=0;
+	arr.forEach(getsum);
+	document.getElementById("forEach").innerHTML = "Sum of elements in array is "+sum;
+	function getsum(ele) {
+	  sum += ele;
+	}
+	const arr2 = [10,20,30];
+	const arr3 = arr.concat(arr2); 
+	document.getElementById("concat").innerHTML = "After concat the array is "+arr3;
+	document.getElementById("every").innerHTML = "All the elements in an array is greater than 18 = "+arr3.every(checkAge);
+	function checkAge(age) {
+	  return age > 18;
+	}
+    document.getElementById("some").innerHTML = "Any one of the element in array is greater than 18 = "+arr3.some(checkAdult);
+	function checkAdult(age) {
+	  return age > 18;
+	}
+	document.getElementById("includes").innerHTML ="30 is present in the array or not : "+ arr3.includes(30);
+	const names=["rosy","lilly","rasi"]
+	let res = names.join();
+	document.getElementById("join").innerHTML = res;
+	document.getElementById("reduce").innerHTML = "Subtract the numbers in the array, starting from the left: "+arr.reduce(getres);
+	function getres(total, num) {
+	  return total - num;
+	}
+	document.getElementById("find").innerHTML = "The first element that is satisfies the condition : "+arr3.find(checkAge);
+	function checkAge(age) {
+	  return age > 18;
+	}
+	document.getElementById("findindex").innerHTML = "The first element index that is satisfies the condition is : "+arr3.findIndex(checkAge);
+	function checkAge(age) {
+	  return age > 18;
+	}
+	let index = arr3.indexOf(30);
+	document.getElementById("indexof").innerHTML = "The index of 30 element in ana array is : "+index;
+	document.getElementById("fill").innerHTML = "Fill all array elements with 10 : "+arr3.fill(10);
+	const part = arr.slice(1, 4);
+	document.getElementById("slice").innerHTML = "It returns selected elements as new array : "+part;
+	document.getElementById("reverse").innerHTML = "It reverse the order of elements in an array : "+arr.reverse();
+	arr.push(45);
+	document.getElementById("push").innerHTML = "It adds new element to the end of an array : "+arr;
+	arr.pop();
+	document.getElementById("pop").innerHTML = "It removes the last element of an array :"+arr;
+	names.shift();
+	document.getElementById("shift").innerHTML = "shift() removes the first item of an array : "+names;
+	names.unshift("ram", "sita");
+	document.getElementById("unshift").innerHTML = "unshift() adds new items to the beginning of an array : "+names;
+</script>
+</html>

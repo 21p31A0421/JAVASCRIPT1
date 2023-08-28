@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+  
+<head>
+    
+    <title>Image Slider</title>
+      <style type="text/css">
+          
+.slider {
+    width: 100%;
+    position: relative;
+}
+  
+.slider ul {
+    list-style: none;
+    margin: 50px;
+    padding: 0;
+}
+  
+.slider li {
+    position: absolute;
+    top: 0;
+    left:350px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+  
+img {
+    height: 500px;
+    width: 800px;
+}
+  
+.slider li.active {
+    opacity: 1;
+}
+  
+
+      </style>
+</head>
+  
+<body>
+<div class="slider">
+        <ul>
+            <li>
+                <img src="1.jpg" alt="GFG Image 1">
+               
+            </li>
+            <li>
+                <img src="2.jpg" alt="GFG Image 2">
+                
+            </li>
+            <li>
+                <img src="3.jpg" alt="GFG Image 3">
+                
+            </li>
+            <li>
+                <img src="4.jpg" alt="GFG Image 4">
+                
+            </li>
+            <li>
+                <img src="5.jpg" alt="GFG Image 5">
+                
+            </li>
+            <li>
+                <img src="6.jpg" alt="GFG Image 6">
+                
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        const slider = document.querySelector('.slider');
+        const slides = slider.querySelectorAll('li');
+  
+// Store the total number of images
+      const slideCount = slides.length;
+     let activeSlide = 0;
+  
+// To change the images dynamically every 
+// 5 Secs, use SetInterval() method
+setInterval(() => {
+    slides[activeSlide].classList.remove('active');
+    activeSlide++;
+    if (activeSlide === slideCount) {
+        activeSlide = 0;
+    }
+    slides[activeSlide].classList.add('active');
+}, 3000);
+    </script>
+</body>
+  
+</html>
